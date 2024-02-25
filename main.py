@@ -21,27 +21,27 @@ class MyApp(App):
         self.volume = Label(text='Общий объем')
         self.volumePP = Label(text='Объем Преполимера')
 
-        self.input_wheel = TextInput(hint_text='Введите значение (мм)', multiline=False)
+        self.input_wheel = TextInput(hint_text='Введите значение (мм)', multiline=False, input_filter="float")
         self.input_wheel.bind(text=self.on_text)
 
-        self.input_form = TextInput(hint_text='Введите значение (мм)', multiline=False)
+        self.input_form = TextInput(hint_text='Введите значение (мм)', multiline=False, input_filter="float")
         self.input_form.bind(text=self.on_text)
 
-        self.input_height = TextInput(hint_text='Введите значение (мм)', multiline=False)
+        self.input_height = TextInput(hint_text='Введите значение (мм)', multiline=False, input_filter="float")
         self.input_height.bind(text=self.on_text)
 
-        self.input_density = TextInput(hint_text='Введите значение', multiline=False)
+        self.input_density = TextInput(hint_text='Введите значение', multiline=False, input_filter="float")
         self.input_density.bind(text=self.on_text)
 
-        self.input_procent = TextInput(hint_text='Введите значение (%)', multiline=False)
+        self.input_procent = TextInput(hint_text='Введите значение (%)', multiline=False, input_filter="float")
         self.input_procent.bind(text=self.on_text)
 
     def on_text(self, *args):
-        input_wheel = self.input_wheel.text.replace(",", ".")
-        input_form = self.input_form.text.replace(",", ".")
-        input_height = self.input_height.text.replace(",", ".")
-        input_density = self.input_density.text.replace(",", ".")
-        input_procent = self.input_procent.text.replace(",", ".")
+        input_wheel = self.input_wheel.text
+        input_form = self.input_form.text
+        input_height = self.input_height.text
+        input_density = self.input_density.text
+        input_procent = self.input_procent.text
         volume = self.volume.text
 
 
