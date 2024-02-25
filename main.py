@@ -2,13 +2,17 @@ from kivy.app import App
 from kivy.uix.label import Label
 from kivy.uix.boxlayout import BoxLayout
 from kivy.uix.textinput import TextInput
-#from kivy.uix.button import Button
 from kivy.core.window import Window
 
 # глобальные настройки окна
 Window.size = (300, 600)
 Window.clearcolor = (255/255, 190/255, 152/255, 1)
 Window.title = "Расчет Объема на колесо"
+Label.font_size = 22
+Label.color = (0, 0, 0, 1)
+Label.bold = True
+Label.halign = 'center'
+
 
 class MyApp(App):
     def __init__(self):
@@ -21,19 +25,19 @@ class MyApp(App):
         self.volume = Label(text='Общий объем')
         self.volumePP = Label(text='Объем Преполимера')
 
-        self.input_wheel = TextInput(hint_text='Введите значение (мм)', multiline=False, input_filter="float")
+        self.input_wheel = TextInput(hint_text='Введите значение (мм)', multiline=False, input_filter="float", font_size = 25, halign = 'center')
         self.input_wheel.bind(text=self.on_text)
 
-        self.input_form = TextInput(hint_text='Введите значение (мм)', multiline=False, input_filter="float")
+        self.input_form = TextInput(hint_text='Введите значение (мм)', multiline=False, input_filter="float", font_size = 25, halign = 'center')
         self.input_form.bind(text=self.on_text)
 
-        self.input_height = TextInput(hint_text='Введите значение (мм)', multiline=False, input_filter="float")
+        self.input_height = TextInput(hint_text='Введите значение (мм)', multiline=False, input_filter="float", font_size = 25, halign = 'center')
         self.input_height.bind(text=self.on_text)
 
-        self.input_density = TextInput(hint_text='Введите значение', multiline=False, input_filter="float")
+        self.input_density = TextInput(hint_text='Введите значение', multiline=False, input_filter="float", font_size = 25, halign = 'center')
         self.input_density.bind(text=self.on_text)
 
-        self.input_procent = TextInput(hint_text='Введите значение (%)', multiline=False, input_filter="float")
+        self.input_procent = TextInput(hint_text='Введите значение (%)', multiline=False, input_filter="float", font_size = 25, halign = 'center')
         self.input_procent.bind(text=self.on_text)
 
     def on_text(self, *args):
