@@ -44,17 +44,6 @@ class MyApp(App):
         input_procent = self.input_procent.text.replace(",", ".")
         volume = self.volume.text
 
-        # some_list = [input_wheel, input_form, input_height, input_density, input_procent]
-        # if all([i.isnumeric() for i in some_list]):
-        #     volume_result = round(((3.14 * float(input_form) ** 2 * float(input_height)) / 4000000 - (3.14 * float(input_wheel) ** 2 * float(input_height))/4000000) * float(input_density), 3)
-        #
-        #     self.volume.text = 'Общий объем: ' + str(volume_result)
-        #     self.volumePP.text = 'Объем Преполимера: ' + str(round(volume_result * 100 / (float(input_procent) + 100), 3))
-        #
-        #
-        # else:
-        #     self.volume.text = ''
-        #     self.volumePP.text = ''
 
         some_list = [input_wheel, input_form, input_height, input_density, input_procent]
         try:
